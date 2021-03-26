@@ -44,7 +44,7 @@ function matchPassword()
 function checkPassword()
 {
     var password = document.getElementById("password").value;
-    var re = new RegExp("(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/]).{8,}");
+    var re = new RegExp("^(?=.{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$");
     if(password == '')
     {
         document.getElementById("checkPass").innerHTML="Required";
