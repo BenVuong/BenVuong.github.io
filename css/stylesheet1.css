@@ -1,0 +1,162 @@
+body {
+    font: 150% Lucida Sans, Verdana;
+    margin: 20px;
+    line-height: 26px;
+}
+
+.container {
+    xmin-width: 1800px;
+
+}
+
+/* selector .wrapper selects all tags in the HTML with class="wrapper" */
+.wrapper {
+    position: relative;
+    overflow: auto;
+}
+
+/* use commas (,) to create a rule with grouped selectors */
+#top, #sidebar, #bottom, .menuitem {
+
+    border-radius: 4px;
+    margin: 4px;
+}
+
+/* selector #top selects the tag in the HTML with id="top" */
+#top {
+    background-color: black;
+    color: #ffffff;
+    padding: 15px;
+}
+
+#menubar {
+    width: 200px;
+    float: left;
+    font: 150% Lucida Sans, Verdana;
+
+}
+
+
+#main {
+    padding: 10px;
+    margin:  0 200px;
+    font-size: 100%;
+}
+
+#sidebar {
+
+    padding: 10px;
+
+    position: absolute;
+}
+
+#bottom {
+    border: 5px solid #d4d4d4;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 100%;
+    line-height: 14px;
+}
+
+#top h1, #top p, #menulist {
+    margin: 0;
+    padding: 0;
+}
+
+#icons {
+    animation-duration: 3s;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+    width: 128%;
+    height: 128px;
+    background-image:url("/img/sword.png");
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes move
+{
+    0%   {top:200px;}
+    25%  {left:500px;}
+    50%  {top:300px;}
+    75%  {left:50px;}
+    100% {top:30px;}
+
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+#logo{
+    position: absolute;
+    right: 100px;
+
+}
+
+
+
+.menuitem {
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
+    list-style-type: none;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.menuitem:hover {
+    background-color: #ffffff;
+}
+
+.menuitem:first-child {
+    background-color:#4CAF50;
+    color: white;
+    font-weight:bold;
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+    #sidebar {
+        width: auto;
+        position: relative;
+    }
+    #main {
+        margin-right: 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    #menubar {
+        width: auto;
+        float: none;
+    }
+    #main {
+        margin: 0;
+    }
+}
